@@ -32,23 +32,23 @@ export default function MdaForm({ onSubmit }) {
             </ToastContainer>
             <Form onSubmit={handleSubmit(formData)}>
                 <Form.Group className="mb-3" controlId="url">
-                    <Form.Label>URL</Form.Label>
-                    <Form.Control {...register("url", { required: { value: true, message: "Obrigatório!" }, maxLength: { value: 250, message: "Limite máximo atingido!" } })} isInvalid={!!errors.url} type="text" placeholder="Enter url" />
+                    <Form.Label>URL do banco de dados</Form.Label>
+                    <Form.Control {...register("url", { required: { value: true, message: "Obrigatório!" }, maxLength: { value: 250, message: "Limite máximo atingido!" } })} isInvalid={!!errors.url} type="text" placeholder="jdbc:postgresql://localhost:5432/exemplo" />
                     <Form.Control.Feedback type="invalid">{errors.url?.message}</Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="username">
-                    <Form.Label>User</Form.Label>
-                    <Form.Control {...register("username", { required: { value: true, message: "Obrigatório!" }, maxLength: { value: 100, message: "Limite máximo atingido!" } })} isInvalid={!!errors.username} type="text" placeholder="Enter user" />
+                    <Form.Label>Usuário</Form.Label>
+                    <Form.Control {...register("username", { required: { value: true, message: "Obrigatório!" }, maxLength: { value: 100, message: "Limite máximo atingido!" } })} isInvalid={!!errors.username} type="text" placeholder="Usuário de conexão" />
                     <Form.Control.Feedback type="invalid">{errors.username?.message}</Form.Control.Feedback>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="password">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control {...register("password", { required: { value: true, message: "Obrigatório!" }, maxLength: { value: 100, message: "Limite máximo atingido!" } })} isInvalid={!!errors.password} type="password" placeholder="Password" />
+                    <Form.Label>Senha</Form.Label>
+                    <Form.Control {...register("password", { required: { value: true, message: "Obrigatório!" }, maxLength: { value: 100, message: "Limite máximo atingido!" } })} isInvalid={!!errors.password} type="password" placeholder="Senha de autenticação" />
                     <Form.Control.Feedback type="invalid">{errors.password?.message}</Form.Control.Feedback>
                 </Form.Group>
                 <div className="d-grid gap-2">
                     <Button variant="primary" type="submit">
-                        Gerar
+                        Extrair
                     </Button>
                 </div>
             </Form>

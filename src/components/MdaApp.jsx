@@ -22,7 +22,7 @@ export default function MdaApp() {
     }
 
     function build(data) {
-        const i = generatedModels.findIndex(_item => _item.name === data.name);
+        const i = generatedModels.findIndex(_item => _item.id === data.id);
         if (i > -1) generatedModels[i] = data;
         else generatedModels.push(data);
         setGeneratedModels(generatedModels);
@@ -41,12 +41,12 @@ export default function MdaApp() {
                     <Col sm={6}>
                         <MdaForm onSubmit={result} />
                     </Col>
-                    <Col sm={6}>
+                    <Col sm={6} style={{ marginTop: '30px' }}>
                         <Card>
                             <Card.Header className="text-center">Sobre o projeto</Card.Header>
                             <Card.Body>
                                 <Card.Text>
-                                    Modelos Específicos de Plataforma utilizados na Arquitetura Dirigida a Modelos geram artefatos com código-fonte que facilitam e aumentam a produtividade no desenvolvimento de software. Esta pesquisa desenvolve uma plataforma que extraí metadados de um banco de dados relacional gerando Web Services com uso dos conceitos de No-Code e Low-Code, transformando modelos e disponibilizando artefatos na linguagem de programação Java. Após uso da plataforma em bases de dados existentes, foram coletados dados de performance e analisados os artefatos gerados validando a execução dos mesmos.
+                                    <img src="use-case.png" alt="Caso de uso" className="img-fluid" />
                                 </Card.Text>
                             </Card.Body>
                         </Card>

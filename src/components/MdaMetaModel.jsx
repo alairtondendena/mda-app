@@ -46,8 +46,8 @@ export default function MdaMetaModel({ pos, attribute, types, build }) {
                 <Form.Label>Precisão</Form.Label>
                 <Form.Control {...register("numScale")} type="number" placeholder="Precisão" />
             </Form.Group>
-            <Form.Group controlId={'nullable-' + pos}>
-                <Form.Check {...register("nullable")} type="checkbox" label="Obrigatório" />
+            <Form.Group controlId={'required-' + pos}>
+                <Form.Check {...register("required")} type="checkbox" label="Obrigatório" />
             </Form.Group>
             <Form.Group controlId={'primaryKey-' + pos}>
                 <Form.Check {...register("primaryKey")} disabled type="checkbox" label="Chave Primária" />
